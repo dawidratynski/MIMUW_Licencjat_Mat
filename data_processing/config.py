@@ -9,7 +9,7 @@ OUTPUT_DIR: str = os.path.join(BASE_DIR, "dataset")
 REAL_DATA_DIR: str = os.path.join(BASE_DIR, "raw/real")
 REAL_DATA_CSV_FILE: str = os.path.join(BASE_DIR, "raw/data_summary_2957.csv")
 
-SYNTH_DATA_DIR: str = os.path.join("BASE_DIR", "raw/synth")
+SYNTH_DATA_DIR: str = os.path.join(BASE_DIR, "raw/synth")
 SYNTH_DATA_FILES: list[str] = [
     "images_0-010.npy",
     "images_1-006.npy",
