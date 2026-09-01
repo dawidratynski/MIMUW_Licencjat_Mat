@@ -1,0 +1,13 @@
+# torch and torchvision are NOT listed here: the correct wheel depends on your
+# CUDA version. Install them first, following the selector on
+# https://pytorch.org/get-started/locally/
+#
+# pandas is capped below 2.0 because the vendored training-history callback
+# (uvcgan_training/UVCGAN/source/uvcgan2/train/callbacks/history.py) calls
+# DataFrame.append, which pandas 2.0 removed; with a newer pandas both training
+# stages crash at the end of epoch 2.
+
+numpy
+pandas<2.0
+tqdm
+Pillow

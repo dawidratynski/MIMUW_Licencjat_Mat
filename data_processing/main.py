@@ -8,7 +8,6 @@ import numpy as np
 from data_processing.config import *
 from data_processing.real_images import process_real_images
 from data_processing.synth_images import process_synth_images
-from data_processing.train_val_split import train_val_split
 
 
 def prepare_folders() -> None:
@@ -19,9 +18,9 @@ def prepare_folders() -> None:
         else:
             raise ValueError(f"Target directory {target_dir} already exists")
 
-    os.makedirs(target_dir, exist_ok=True)
-    os.makedirs(target_dir + "/real", exist_ok=True)
-    os.makedirs(target_dir + "/synth", exist_ok=True)
+    for split in SPLITS:
+        for domain in DOMAINS:
+            os.makedirs(os.path.join(target_dir, split, domain), exist_ok=True)
 
 
 def main() -> None:
@@ -34,9 +33,6 @@ def main() -> None:
 
     process_real_images()
     process_synth_images()
-
-    train_val_split(os.path.join(OUTPUT_DIR, "real"))
-    train_val_split(os.path.join(OUTPUT_DIR, "synth"))
 
 
 if __name__ == "__main__":
