@@ -2,7 +2,7 @@ import os
 
 # DATASET SETTINGS
 
-BASE_DIR: str = r"C:\crystal_data"  # SET THIS TO THE DATASET OUTPUT LOCATION
+BASE_DIR: str = "crystal_data"  # SET THIS TO THE DATASET OUTPUT LOCATION
 
 # Raw inputs are read from RAW_DIR, which is independent of BASE_DIR: the
 # generated dataset is tens of thousands of files and must stay off the

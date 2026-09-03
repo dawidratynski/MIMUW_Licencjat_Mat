@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+daneProsem/
+crop_filtering_by_region/
+crystal_data/
+outImages/
