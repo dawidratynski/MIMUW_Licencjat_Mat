@@ -5,7 +5,7 @@
 From the repository root:
 
 ```powershell
-pip install torch torchvision
+       
 pip install -r requirements.txt
 python uvcgan_training/setup_uvcgan.py
 ```
@@ -16,10 +16,10 @@ Set `BASE_DIR` in `data_processing/config.py`.
 python process_data.py
 
 cd uvcgan_training
-$env:UVCGAN2_DATA   = "..."
+$env:UVCGAN2_DATA   = "..."  ; csh setenv UVCGAN2_DATA "..."
 $env:UVCGAN2_OUTDIR = "..."
-python pretrain_crystals.py
-python train_crystals.py
+python uvcgan_training/pretrain_crystals.py
+python uvcgan_training/train_crystals.py
 ```
 
 ## Later times

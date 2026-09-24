@@ -8,6 +8,7 @@
 # stages crash at the end of epoch 2.
 
 numpy
-pandas<2.0
+pandas
 tqdm
 Pillow
+torchvision

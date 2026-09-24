@@ -85,7 +85,7 @@ args_dict = {
         'workers'    : 1, # Increase this (e.g. 4 or 8) if data loading is a bottleneck
     },
     # Set the number of epochs to match your initial plan
-    'epochs'      : 200, 
+    'epochs'      : 1, 
     'discriminator' : {
         'model'      : 'basic',
         'model_args' : { 'shrink_output' : False, },
